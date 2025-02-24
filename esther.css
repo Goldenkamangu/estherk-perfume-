@@ -481,4 +481,18 @@
       color: #fff8f8;
     }
   }
+
+
+  /* Initial state: off-screen and hidden */
+.slide-in {
+    opacity: 0;
+    transform: translateY(50px);  /* Change to translateX(-50px) to slide from left */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When element is in view */
+  .slide-in.visible {
+    opacity: 1;
+    transform: translateY(0);  /* Change accordingly if you adjust the initial transform */
+  }
   
