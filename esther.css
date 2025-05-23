@@ -259,66 +259,124 @@
     background-color: #444;
   }
   
-  /*--------------------------------------
-    FAQ Section
-  --------------------------------------*/
+ /* Improved FAQ Section - Modern, Perfume Brand Colors */
+#faq {
+  background: #0c1e33;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#faq h2 {
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.faq-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #192a4e;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 1.5px solid #FFD70022;
+}
+
+.faq-item.active,
+.faq-item:hover {
+  box-shadow: 0 8px 32px rgba(255,215,0,0.13), 0 2px 8px rgba(0,0,0,0.10);
+  transform: translateY(-4px) scale(1.01);
+  border-color: #FFD700;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  color: #FFD700;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.18rem;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 12px 12px 0 0;
+  outline: none;
+  font-family: 'Poppins', Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.faq-question:hover,
+.faq-item.active .faq-question {
+  background: #FFD700;
+  color: #192a4e;
+}
+
+.faq-icon {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-left: 16px;
+  color: #FFD700;
+  transition: transform 0.3s, color 0.2s;
+  display: inline-block;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: #192a4e;
+}
+
+.faq-answer {
+  display: none;
+  background: #fffbe6;
+  color: #222;
+  padding: 0 1.4rem;
+  font-size: 1.05rem;
+  border-radius: 0 0 12px 12px;
+  border-left: 4px solid #FFD700;
+  line-height: 1.7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(.4,2,.6,1), padding 0.3s;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+  padding: 1.1rem 1.4rem;
+  max-height: 300px;
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive FAQ */
+@media (max-width: 600px) {
   .faq-container {
-    max-width: 600px;
-    margin: 2rem auto;
-    background: var(--dark-bg);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: var(--secondary-color);
+    max-width: 98vw;
+    padding: 0 2vw;
   }
-  
-  .faq-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  details {
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #0c1e33;
-    transition: border-color 0.3s;
-  }
-  
-  details:hover {
-    border-color: #fff;
-  }
-  
-  summary {
-    padding: 15px;
+  .faq-question, .faq-answer {
     font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    background: #22405e;
-    color: var(--secondary-color);
-    transition: background-color 0.3s;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  
-  summary:hover {
-    background-color: #0379f0;
-  }
-  
-  summary::marker {
-    font-size: 1.2rem;
-  }
-  
-  details[open] summary {
-    background-color: #0a3c6e;
-  }
-  
-  details p {
-    padding: 15px;
-    font-size: 0.95rem;
-    background: var(--light-bg);
-    border-top: 1px solid #ddd;
-    color: var(--primary-color);
-  }
+}
   
   /*--------------------------------------
     Contact Section
@@ -421,7 +479,7 @@
   }
   
   .highlight {
-    color: #000;
+    color: #FFD700;
     font-size: 1.1rem;
     font-weight: bolder;
     text-transform: uppercase;
@@ -495,4 +553,191 @@
     opacity: 1;
     transform: translateY(0);  /* Change accordingly if you adjust the initial transform */
   }
-  
+
+/* Testimonials Section */
+#testimonials {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+#testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.testimonial {
+  margin: 1rem auto;
+  max-width: 600px;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #333;
+  padding-left: 1rem;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Blog Section */
+#blog {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+#blog h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+#blog article {
+  margin: 1rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#blog article h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#blog article p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+#blog article a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#blog article a:hover {
+  text-decoration: underline;
+}
+
+/* Team Section */
+#team {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+#team h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.team-member {
+  display: inline-block;
+  margin: 1rem;
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Awards Section */
+#awards {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+#awards h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.award {
+  display: inline-block;
+  margin: 1rem;
+  text-align: center;
+}
+
+.award img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.award p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Social Media Section */
+#social-media {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+#social-media h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.social-feed iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  border: none;
+  margin: 0 auto;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: flex-end; /* Align icons to the right */
+  gap: 1rem; /* Space between icons */
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px; /* Icon size */
+  height: 40px;
+  color: #fff; /* Default icon color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Hover color */
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.social-icons svg {
+  width: 100%; /* Make SVG fill the container */
+  height: 100%;
+  fill: currentColor; /* Inherit color from parent */
+}
